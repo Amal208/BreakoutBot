@@ -9,15 +9,15 @@ from binance.client import Client
 from binance.enums import HistoricalKlinesType
 from telegram import Bot
 
-# ===== STARTUP VALIDATION =====
-def validate_config():
-    required_vars = ["npWpNsw98SrIjDSgYRSeQXuKkdZPigx4VDNTjNH1NleR61nADQnskjVKxq9zVKw5", "XJAtZ6V5fa93VfkD5cGbPRVLCTL2LeMnqQYMxRMGYWTi5LOxxH1ZNE4zG6vtC7bl", "7838823091:AAEXMGY6kQVLK6h2XZgTU63vxTPkxmkD0zs", "-1002915874071"]
-    missing = [var for var in required_vars if not os.getenv(var)]
-    if missing:
-        raise EnvironmentError(f"❌ Missing environment variables: {missing}")
+# # ===== STARTUP VALIDATION =====
+# def validate_config():
+#     required_vars = ["npWpNsw98SrIjDSgYRSeQXuKkdZPigx4VDNTjNH1NleR61nADQnskjVKxq9zVKw5", "XJAtZ6V5fa93VfkD5cGbPRVLCTL2LeMnqQYMxRMGYWTi5LOxxH1ZNE4zG6vtC7bl", "7838823091:AAEXMGY6kQVLK6h2XZgTU63vxTPkxmkD0zs", "-1002915874071"]
+#     missing = [var for var in required_vars if not os.getenv(var)]
+#     if missing:
+#         raise EnvironmentError(f"❌ Missing environment variables: {missing}")
 
-validate_config()
-print("✅ All environment variables loaded.")
+# validate_config()
+# print("✅ All environment variables loaded.")
 
 # ===== CONFIG =====
 API_KEY = "npWpNsw98SrIjDSgYRSeQXuKkdZPigx4VDNTjNH1NleR61nADQnskjVKxq9zVKw5"
@@ -273,6 +273,7 @@ if __name__ == "__main__":
         print("\n🛑 Bot stopped manually.")
     except Exception as e:
         print(f"💥 Critical error: {e}")
+
 
 
 
