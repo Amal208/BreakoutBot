@@ -20,13 +20,13 @@ from telegram import Bot
 # print("✅ All environment variables loaded.")
 
 # ===== CONFIG =====
-API_KEY = "npWpNsw98SrIjDSgYRSeQXuKkdZPigx4VDNTjNH1NleR61nADQnskjVKxq9zVKw5"
-API_SECRET = "XJAtZ6V5fa93VfkD5cGbPRVLCTL2LeMnqQYMxRMGYWTi5LOxxH1ZNE4zG6vtC7bl"
+# API_KEY = "npWpNsw98SrIjDSgYRSeQXuKkdZPigx4VDNTjNH1NleR61nADQnskjVKxq9zVKw5"
+# API_SECRET = "XJAtZ6V5fa93VfkD5cGbPRVLCTL2LeMnqQYMxRMGYWTi5LOxxH1ZNE4zG6vtC7bl"
 TELEGRAM_TOKEN = "7838823091:AAEXMGY6kQVLK6h2XZgTU63vxTPkxmkD0zs"
 CHAT_ID = "-1002915874071"
 
 # Initialize clients
-client = Client(API_KEY, API_SECRET)
+client = Client()
 bot = Bot(token=TELEGRAM_TOKEN)
 
 # ===== STATE TRACKING FILE =====
@@ -273,6 +273,7 @@ if __name__ == "__main__":
         print("\n🛑 Bot stopped manually.")
     except Exception as e:
         print(f"💥 Critical error: {e}")
+
 
 
 
