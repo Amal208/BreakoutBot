@@ -192,7 +192,7 @@ async def job():
             price = float(t["lastPrice"])
             symbol = t["symbol"]
 
-            if volume < 10_000_000:  # $10M+
+            if volume < 5_000_000:  # $10M+
                 continue
             if price < 0.000001:
                 continue
@@ -272,6 +272,7 @@ if __name__ == "__main__":
         print("\n🛑 Bot stopped manually.")
     except Exception as e:
         print(f"💥 Critical error: {e}")
+
 
 
 
